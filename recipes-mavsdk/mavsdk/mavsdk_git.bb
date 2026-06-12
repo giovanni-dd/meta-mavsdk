@@ -16,7 +16,6 @@ SRC_URI += " \
 PV = "3.11+git"
 SRCREV = "33b23ddaa68ae2b124754376346b44b3f0f15685"
 
-S = "${WORKDIR}/git"
 OECMAKE_SOURCEPATH = "${S}/cpp"
 
 DEPENDS = " \

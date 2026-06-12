@@ -10,7 +10,7 @@ SRC_URI = "gitsm://github.com/mavlink/mavlink.git;protocol=https;branch=master"
 PV = "1.0+git"
 SRCREV = "d6a7eeaf43319ce6da19a1973ca40180a4210643"
 
-S = "${WORKDIR}/git/pymavlink"
+S = "${UNPACKDIR}/${BP}/pymavlink"
 
 DEPENDS += " \
     python3-cython-native \
