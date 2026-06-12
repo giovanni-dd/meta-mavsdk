@@ -7,7 +7,8 @@ SRC_URI = "file://libmavsdk_3.17.1_armv7.deb"
 
 inherit bin_package
 
-S = "${WORKDIR}"
+S = "${WORKDIR}/sources"
+UNPACKDIR = "${S}"
 
 do_install() {
     install -d ${D}/usr
