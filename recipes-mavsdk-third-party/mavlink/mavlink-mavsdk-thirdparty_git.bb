@@ -14,7 +14,7 @@ PV = "1.0+git"
 SRCREV = "5e3a42b8f3f53038f2779f9f69bd64767b913bb8"
 
 
-DEPENDS += "python3-pymavlink-native"
+DEPENDS += "python3-pymavlink-native libtinyxml2"
 
 inherit cmake
 
