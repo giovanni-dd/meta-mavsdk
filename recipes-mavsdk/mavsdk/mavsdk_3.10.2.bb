@@ -12,7 +12,7 @@ SRCREV = "fb2b989b5b9849358bf9c2cb082f496d55edf173"
 
 DEPENDS = " \
     mavlink-mavsdk-thirdparty \
-    abseil-cpp-mavsdk-thirdparty \
+    abseil-cpp \
     libtinyxml2 \
     c-ares-mavsdk-thirdparty \
     protobuf-mavsdk-thirdparty \

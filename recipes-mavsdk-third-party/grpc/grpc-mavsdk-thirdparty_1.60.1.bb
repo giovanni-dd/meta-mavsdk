@@ -7,7 +7,7 @@ LICENSE = "Apache-2.0 & BSD-3-Clause & MPL-2.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=731e401b36f8077ae0c134b59be5c906"
 
 DEPENDS = "c-ares-mavsdk-thirdparty protobuf-mavsdk-thirdparty protobuf-mavsdk-thirdparty-native openssl-mavsdk-thirdparty libnsl2 \
-abseil-cpp-mavsdk-thirdparty re2-mavsdk-thirdparty zlib-mavsdk-thirdparty \
+abseil-cpp re2-mavsdk-thirdparty zlib-mavsdk-thirdparty \
 "
 INSANE_SKIP:${PN} += "installed-vs-shipped"
 

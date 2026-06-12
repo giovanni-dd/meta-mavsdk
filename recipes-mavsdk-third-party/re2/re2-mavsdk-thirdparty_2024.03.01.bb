@@ -9,7 +9,7 @@ SRCREV = "2d866a3d0753f4f4fce93cccc6c59c4b052d7db4"
 SRC_URI = "git://github.com/google/re2.git;branch=main;protocol=https"
 
 
-DEPENDS = "abseil-cpp-mavsdk-thirdparty"
+DEPENDS = "abseil-cpp"
 
 inherit cmake
 
