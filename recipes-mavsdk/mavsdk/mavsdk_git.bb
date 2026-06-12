@@ -10,7 +10,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}:${THISDIR}/patches:"
 SRC_URI = "gitsm://github.com/mavlink/MAVSDK.git;protocol=https;branch=main"
 SRC_URI += " \
     file://0001-yocto-superbuild-mavlink.patch \
-    file://mavlink-yocto-pymavlink.patch \
+    file://mavlink-yocto-pymavlink.patch;apply=no \
 "
 
 PV = "3.11+git"

@@ -25,4 +25,4 @@ RDEPENDS:${PN} += " \
     python3-core \
 "
 
-inherit setuptools3 native
+inherit python_pep517 native
