@@ -14,8 +14,12 @@ PV = "1.0+git"
 SRCREV = "5e3a42b8f3f53038f2779f9f69bd64767b913bb8"
 
 
-DEPENDS += "python3-pymavlink-native libtinyxml2"
+DEPENDS += " \
+    python3-pymavlink-native \
+    python3-future-native \
+    python3-lxml-native \
+"
 
-inherit cmake
+inherit cmake python3native
 
-EXTRA_OECMAKE = ""
+EXTRA_OECMAKE = "-DPYTHON_NATIVE_SITEPACKAGES=${STAGING_LIBDIR_NATIVE}/python${PYTHON_BASEVERSION}/site-packages"

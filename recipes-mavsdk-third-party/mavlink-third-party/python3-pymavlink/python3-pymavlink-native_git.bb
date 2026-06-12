@@ -11,9 +11,15 @@ SRC_URI = "gitsm://github.com/mavlink/mavlink.git;protocol=https;branch=master"
 inherit setuptools3 native
 
 PV = "1.0+git"
-SRCREV = "b401fe0238b9647f8ea18d58d9e968b79b347916"
+SRCREV = "5e3a42b8f3f53038f2779f9f69bd64767b913bb8"
 
 S = "${UNPACKDIR}/${BP}/pymavlink"
 
-DEPENDS += "python3-fastcrc-native python3-cython-native python3-native"
-RDEPENDS:${PN} += "python3-fastcrc python3-lxml python3-core"
+DEPENDS += " \
+    python3-fastcrc-native \
+    python3-cython-native \
+    python3-future-native \
+    python3-lxml-native \
+    python3-native \
+"
+RDEPENDS:${PN} += "python3-fastcrc-native python3-future-native python3-lxml-native python3-core"
