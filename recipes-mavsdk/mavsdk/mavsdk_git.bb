@@ -8,10 +8,9 @@ LIC_FILES_CHKSUM = "file://LICENSE.md;md5=84b641454775df91a2bae8fdd450e2e9 \
 FILESEXTRAPATHS:prepend := "${THISDIR}:${THISDIR}/patches:"
 
 SRC_URI = "gitsm://github.com/mavlink/MAVSDK.git;protocol=https;branch=main"
-SRC_URI += " \
-    file://0001-yocto-superbuild-mavlink.patch \
-    file://mavlink-yocto-pymavlink.patch;apply=no \
-"
+SRC_URI += "file://0001-yocto-superbuild-mavlink.patch"
+
+MAVLINK_YOCTO_PYMAVLINK_PATCH := "${THISDIR}/mavlink-yocto-pymavlink.patch"
 
 PV = "3.11+git"
 SRCREV = "33b23ddaa68ae2b124754376346b44b3f0f15685"
@@ -49,5 +48,5 @@ do_patch:append() {
 }
 
 mavsdk_install_mavlink_patch() {
-    install -m 0644 ${WORKDIR}/mavlink-yocto-pymavlink.patch ${S}/cpp/third_party/mavlink/
+    install -m 0644 ${MAVLINK_YOCTO_PYMAVLINK_PATCH} ${S}/cpp/third_party/mavlink/mavlink-yocto-pymavlink.patch
 }
