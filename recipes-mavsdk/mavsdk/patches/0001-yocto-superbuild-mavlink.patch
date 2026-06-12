@@ -3,15 +3,30 @@ From: Daedalean <yocto@daedalean.ai>
 Date: Thu, 12 Jun 2025 00:00:00 +0000
 Subject: [PATCH] Yocto superbuild: native pymavlink for mavlink ExternalProject
 
-Pass native Python paths into the mavlink superbuild dependency and apply a
-patch so mavgen uses python3-pymavlink-native instead of pip.
+Forward native Python paths through build_target into the mavlink
+ExternalProject and apply a patch so mavgen uses python3-pymavlink-native
+instead of pip.
 
 Upstream-Status: Inappropriate [yocto integration]
 
 ---
- cpp/third_party/mavlink/CMakeLists.txt | 5 ++++-
- 1 file changed, 4 insertions(+), 1 deletion(-)
+ cpp/third_party/cmake/build_target.cmake | 2 ++
+ cpp/third_party/mavlink/CMakeLists.txt   | 5 ++++-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
 
+diff --git a/cpp/third_party/cmake/build_target.cmake b/cpp/third_party/cmake/build_target.cmake
+index 706fcc3f..1fa2cccf 100644
+--- a/cpp/third_party/cmake/build_target.cmake
++++ b/cpp/third_party/cmake/build_target.cmake
+@@ -25,6 +25,8 @@ function(build_target TARGET_NAME)
+             "-DMAVLINK_DIALECT=${MAVLINK_DIALECT}"
+             "-DMAVLINK_URL=${MAVLINK_URL}"
+             "-DMAVLINK_HASH=${MAVLINK_HASH}"
++            "-DPYTHON_NATIVE_SITEPACKAGES=${PYTHON_NATIVE_SITEPACKAGES}"
++            "-DPython3_EXECUTABLE=${Python3_EXECUTABLE}"
+             "${TARGET_SOURCE_DIR}"
+         WORKING_DIRECTORY "${TARGET_BINARY_DIR}"
+         RESULT_VARIABLE CONFIGURE_FAILED
 diff --git a/cpp/third_party/mavlink/CMakeLists.txt b/cpp/third_party/mavlink/CMakeLists.txt
 index 23f814cd..af24987a 100644
 --- a/cpp/third_party/mavlink/CMakeLists.txt

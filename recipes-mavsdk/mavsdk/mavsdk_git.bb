@@ -35,7 +35,8 @@ EXTRA_OECMAKE = " \
     -DBUILD_TESTING=OFF \
     -DBUILD_MAVSDK_SERVER=OFF \
     -DPYTHON_NATIVE_SITEPACKAGES=${STAGING_LIBDIR_NATIVE}/python${PYTHON_BASEVERSION}/site-packages \
-    -DPython3_EXECUTABLE=${PYTHON} \
+    -DPython3_EXECUTABLE=${STAGING_BINDIR_NATIVE}/python3 \
+    -DPython_EXECUTABLE=${STAGING_BINDIR_NATIVE}/python3 \
 "
 
 # Superbuild fetches and builds third-party deps via ExternalProject during cmake configure.
