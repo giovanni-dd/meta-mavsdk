@@ -2,8 +2,7 @@ SUMMARY = "MAVSDK C++ library"
 DESCRIPTION = "MAVSDK provides a high-level C++ API to communicate with MAVLink systems."
 HOMEPAGE = "https://mavsdk.mavlink.io/"
 LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE.md;md5=84b641454775df91a2bae8fdd450e2e9 \
-                    file://debian/copyright;md5=40d669a2ad31adadbe5505defc10fbcc"
+LIC_FILES_CHKSUM = "file://LICENSE.md;md5=84b641454775df91a2bae8fdd450e2e9"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}:${THISDIR}/patches:"
 
