@@ -46,5 +46,5 @@ do_configure[network] = "1"
 do_compile[network] = "1"
 
 do_patch:append() {
-    install -m 0644 ${WORKDIR}/mavlink-yocto-pymavlink.patch ${S}/cpp/third_party/mavlink/
+    install -m 644 ${WORKDIR}/mavlink-yocto-pymavlink.patch ${S}/cpp/third_party/mavlink/
 }
