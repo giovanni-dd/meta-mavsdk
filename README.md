@@ -81,7 +81,6 @@ This layer provides tightly-controlled recipes for core MAVSDK dependencies.
 | `curl-mavsdk-thirdparty_8.7.1.bb` | `curl` | `8.7.1` | Used for HTTP/HTTPS transfers. Includes multiple recent CVE patches. |
 | `libjsoncpp-mavsdk-thirdparty_git.bb` | `libjsoncpp` | Git (`89e2973c...`) | C++ library for reading/writing JSON data. |
 | `liblzma-mavsdk-thirdparty_5.4.5.bb` | `liblzma` (XZ) | `5.4.5` | Compression library dependency. |
-| `libtinyxml2-mavsdk-thirdparty_9.0.0.bb` | `libtinyxml2` | `9.0.0` | Small, efficient C++ XML parser. |
 | `mavlink-mavsdk-thirdparty_git.bb` | `mavlink` | Git (`5e3a42b8...`) | MAVLink message headers and generator tooling. Depends on `python3-pymavlink-native`. |
 | `openssl-mavsdk-thirdparty_3.2.6.bb` | `openssl` | `3.2.6` | The essential SSL/TLS and cryptographic library. Includes CVE-2024-41996 patch. |
 | `picosha2-mavsdk-thirdparty_git.bb` | `picosha2` | Git (`1bf940d8...`) | Header-only SHA-256 implementation. |

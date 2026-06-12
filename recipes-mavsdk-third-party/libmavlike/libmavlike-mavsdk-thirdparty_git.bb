@@ -7,7 +7,7 @@ PV = "1.0+git"
 SRCREV = "80dbd91a0c5d6f0a79f1e8597b820ba075d1cf15"
 
 
-DEPENDS += "libtinyxml2-mavsdk-thirdparty picosha2-mavsdk-thirdparty"
+DEPENDS += "libtinyxml2 picosha2-mavsdk-thirdparty"
 
 FILES:${PN}-dev += "${datadir}/mav/cmake/*.cmake"
 
