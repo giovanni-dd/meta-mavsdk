@@ -4,6 +4,9 @@ Date: Mon, 27 Oct 2025 16:14:15 +0100
 Subject: [PATCH] Pymavlink as yocto dependency
 
 Message_definitions installed into include directory
+
+Upstream-Status: Inappropriate [mavsdk yocto integration]
+
 ---
  CMakeLists.txt | 10 ++++++++--
  1 file changed, 8 insertions(+), 2 deletions(-)

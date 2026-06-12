@@ -3,6 +3,8 @@ From: Jonas Vautherin <dev@jonas.vautherin.ch>
 Date: Wed, 27 Dec 2023 23:48:35 +0100
 Subject: [PATCH] Remove LFS64 interfaces that are now unsupported in Musl
 
+Upstream-Status: Inappropriate [musl build]
+
 ---
 This patch comes from https://git.alpinelinux.org/aports/tree/main/tinyxml2/no-lfs64.patch
 but modified for Android, which requires the LFS64 interfaces.

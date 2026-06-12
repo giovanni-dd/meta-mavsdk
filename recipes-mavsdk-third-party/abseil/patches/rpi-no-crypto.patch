@@ -1,3 +1,5 @@
+Upstream-Status: Inappropriate [targets without ARM crypto extensions]
+
 diff --git a/absl/random/internal/platform.h b/absl/random/internal/platform.h
 index d779f481..ea30118f 100644
 --- a/absl/random/internal/platform.h

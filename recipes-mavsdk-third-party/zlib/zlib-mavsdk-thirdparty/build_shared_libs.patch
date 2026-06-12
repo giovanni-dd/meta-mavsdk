@@ -1,3 +1,5 @@
+Upstream-Status: Inappropriate [mavsdk thirdparty build]
+
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index b412dc7..7f2b6de 100644
 --- a/CMakeLists.txt
