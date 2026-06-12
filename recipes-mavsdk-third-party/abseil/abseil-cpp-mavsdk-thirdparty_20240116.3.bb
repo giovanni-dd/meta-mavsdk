@@ -19,7 +19,6 @@ SRC_URI = "git://github.com/abseil/abseil-cpp;branch=${BRANCH};protocol=https \
            file://rpi-no-crypto.patch \
           "
 
-S = "${WORKDIR}/git"
 
 inherit cmake
 

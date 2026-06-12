@@ -9,7 +9,6 @@ SRC_URI += "file://0001-Disable-superbuild.patch"
 
 SRCREV = "fb2b989b5b9849358bf9c2cb082f496d55edf173"
 
-S = "${WORKDIR}/git"
 
 DEPENDS = " \
     mavlink-mavsdk-thirdparty \

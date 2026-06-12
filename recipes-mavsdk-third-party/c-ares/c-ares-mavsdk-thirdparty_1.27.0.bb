@@ -24,4 +24,3 @@ FILES:${PN}-utils = "${bindir}"
 
 BBCLASSEXTEND = "native nativesdk"
 
-S = "${WORKDIR}/git"
